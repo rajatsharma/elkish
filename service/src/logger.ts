@@ -48,7 +48,7 @@ export const httpLogger = pinoHttp({
 
   wrapSerializers: true,
 
-  customLogLevel: function (req, res, err) {
+  customLogLevel: function (_, res, err) {
     if (res.statusCode >= 400 && res.statusCode < 500) {
       return "warn";
     } else if (res.statusCode >= 500 || err) {
@@ -66,11 +66,11 @@ export const httpLogger = pinoHttp({
     return `${req.method} completed`;
   },
 
-  customReceivedMessage: function (req, res) {
+  customReceivedMessage: function (req) {
     return "request received: " + req.method;
   },
 
-  customErrorMessage: function (req, res, err) {
+  customErrorMessage: function (_, res) {
     return "request errored with status code: " + res.statusCode;
   },
 

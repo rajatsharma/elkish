@@ -57,7 +57,7 @@ app.get("/users/:id", (req: Request, res: Response) => {
   res.json(user);
 });
 
-app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
+app.use((_err: Error, _req: Request, res: Response, _next: NextFunction) => {
   // The error is already logged by pino-http when it's caught here
 
   const errorResponse: ErrorResponse = {
