@@ -1,6 +1,6 @@
 # Elkish
 
-> 🚀 Example Express service with ELK Stack 📊
+> 🚀 Example Express service with logging powered by ELK Stack 📊
 
 A simple Express application built with TypeScript and integrated with the ELK (Elasticsearch, Logstash, Kibana) stack for advanced logging and monitoring. All containerized with Docker for easy deployment! 🐳
 
